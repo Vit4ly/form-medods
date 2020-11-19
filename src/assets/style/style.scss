@@ -1,0 +1,212 @@
+/*Обнуление*/
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+/*--------------------*/
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+
+}
+
+.hr-line {
+  width: 100%;
+  border-bottom: 1px solid rgb(159, 159, 159);
+  text-align: center;
+}
+//select.isInvalid {
+//  border: 1px solid rgb(252, 0, 0);
+//}
+
+.form {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+    opacity: 0.6;
+    padding: 4vw 0;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  &__next-step {
+    margin: 10vw 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+  }
+
+  &__btn {
+    font-size: 16px;
+    font-weight: 700;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: rgba(0, 92, 248, 0.6);
+    transition: background-color .3s;
+    color: #ffffff;
+    &:hover {
+      transition: background-color .3s;
+      background-color: rgba(0, 92, 248, 0.5);
+    }
+  }
+
+  &__header {
+    //max-width: 100%;
+    width: 80%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__header-col {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+  }
+  &__header-col-male {
+    display: flex;
+    align-items: center;
+    input {
+      margin: 10px;
+    }
+  }
+
+  &__header-address-col-zip {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-column-gap: 4vw;
+  }
+
+  &__header-address-col-street {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr;
+    grid-column-gap: 4vw;
+  }
+
+  &__header-passport-col {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr ;
+    grid-column-gap: 4vw;
+  }
+
+  &__header-passport-col-1 {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr ;
+    grid-column-gap: 4vw;
+  }
+
+  &__header-date-phone {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5vw;
+
+  }
+
+  &__header-select-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5vw;
+  }
+
+  &__all-input, select {
+    width: 100%;
+    border: 1px solid rgba(240, 248, 255, 1);
+    background-color: rgba(240, 248, 255, .8);
+    border-radius: 5px;
+    height: 56px;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+
+    &:active,
+    &:focus {
+      border: 1px solid rgba(0, 92, 248, .6);
+      background: transparent;
+
+    }
+
+    &::placeholder {
+      color: #9f9f9f;
+
+    }
+  }
+
+  &__all-label {
+    font-weight: 700;
+    color: rgb(159, 159, 159);
+    padding-bottom: 25px;
+  }
+
+  @media (max-width: 414px) {
+    .container {
+      width: 100%;
+    }
+
+    &__next-step {
+      margin-top: 5vw;
+      margin-bottom: 5vw;
+      justify-content: center;
+      flex-wrap: wrap;
+
+    }
+
+    &__btn {
+      width: 100%;
+
+    }
+
+    &__header-date-phone {
+      grid-template-columns: 1fr;
+
+    }
+
+    &__header-select-block {
+      grid-template-columns: 1fr;
+
+    }
+
+    &__header-passport-col {
+      grid-template-columns: 1fr;
+
+    }
+
+    &__header-passport-col-1 {
+      grid-template-columns: 1fr;
+
+    }
+  }
+}
+
+input.isInvalid,
+select.isInvalid{
+
+  border: 1px solid rgb(246, 150, 150);
+}
+.errorText {
+  color: rgb(246, 150, 150);
+}
