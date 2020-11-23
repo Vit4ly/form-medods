@@ -335,6 +335,7 @@ import { required, minValue, minLength } from 'vuelidate/lib/validators';
 
 export default {
   name: 'FormAll',
+
   data() {
     return {
       surname: '',
@@ -363,6 +364,7 @@ export default {
     typeDoc: { required },
     datIssued: { minValue, required },
   },
+
   methods: {
     submitHandler() {
       if (this.$v.$invalid) {
@@ -374,7 +376,3 @@ export default {
   },
 };
 </script>
-
-<style scoped lang="scss">
-
-</style>
